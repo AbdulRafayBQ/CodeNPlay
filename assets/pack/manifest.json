@@ -1,0 +1,532 @@
+{
+  "game": "CodeQuest",
+  "version": 1,
+  "note": "All frames face RIGHT. Flip horizontally in code for left. Anchor = bottom-centre (feet).",
+  "characters": [
+    {
+      "id": "codex",
+      "name": "Codex",
+      "category": "heroes",
+      "role": "hero",
+      "description": "Blue-hoodie coder boy. Balanced hero, energy-bolt blaster.",
+      "placeholder": false,
+      "facing": "right",
+      "cell": {
+        "w": 70,
+        "h": 94
+      },
+      "anchor": {
+        "x": 35,
+        "y": 92
+      },
+      "hitbox": {
+        "w": 23,
+        "h": 85
+      },
+      "atlas": "characters/heroes/codex/codex_atlas.png",
+      "atlas_2x": "characters/heroes/codex/codex_atlas_2x.png",
+      "folder": "characters/heroes/codex",
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 4,
+          "fps": 6,
+          "loop": true
+        },
+        "run": {
+          "row": 1,
+          "frames": 4,
+          "fps": 10,
+          "loop": true
+        },
+        "jump": {
+          "row": 2,
+          "frames": 3,
+          "fps": 8,
+          "loop": false
+        },
+        "shoot": {
+          "row": 3,
+          "frames": 3,
+          "fps": 12,
+          "loop": false
+        },
+        "hurt": {
+          "row": 4,
+          "frames": 3,
+          "fps": 10,
+          "loop": false
+        },
+        "die": {
+          "row": 5,
+          "frames": 4,
+          "fps": 7,
+          "loop": false
+        }
+      },
+      "fx": {
+        "muzzle_flash": {
+          "file": "fx/muzzle_flash.png",
+          "w": 44,
+          "h": 28
+        },
+        "energy_bolt": {
+          "file": "fx/energy_bolt.png",
+          "w": 72,
+          "h": 30
+        }
+      },
+      "jump_phases": {
+        "takeoff": 0,
+        "rise": 1,
+        "peak": 2,
+        "fall": 2
+      },
+      "suggested_stats": {
+        "hp": 100,
+        "speed": 220,
+        "jump": 620,
+        "shot_damage": 10
+      },
+      "portrait": "characters/heroes/codex/portrait.png"
+    },
+    {
+      "id": "nova",
+      "name": "Nova",
+      "category": "heroes",
+      "role": "hero",
+      "description": "Pink ninja girl. Fast and agile, throws shuriken.",
+      "placeholder": false,
+      "facing": "right",
+      "cell": {
+        "w": 72,
+        "h": 88
+      },
+      "anchor": {
+        "x": 36,
+        "y": 86
+      },
+      "hitbox": {
+        "w": 27,
+        "h": 78
+      },
+      "atlas": "characters/heroes/nova/nova_atlas.png",
+      "atlas_2x": "characters/heroes/nova/nova_atlas_2x.png",
+      "folder": "characters/heroes/nova",
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 4,
+          "fps": 6,
+          "loop": true
+        },
+        "run": {
+          "row": 1,
+          "frames": 4,
+          "fps": 10,
+          "loop": true
+        },
+        "jump": {
+          "row": 2,
+          "frames": 4,
+          "fps": 8,
+          "loop": false
+        },
+        "shoot": {
+          "row": 3,
+          "frames": 3,
+          "fps": 12,
+          "loop": false
+        },
+        "hurt": {
+          "row": 4,
+          "frames": 3,
+          "fps": 10,
+          "loop": false
+        },
+        "die": {
+          "row": 5,
+          "frames": 4,
+          "fps": 7,
+          "loop": false
+        }
+      },
+      "fx": {
+        "shuriken": {
+          "file": "fx/shuriken.png",
+          "w": 50,
+          "h": 42
+        },
+        "kunai": {
+          "file": "fx/kunai.png",
+          "w": 40,
+          "h": 19
+        }
+      },
+      "jump_phases": {
+        "takeoff": 0,
+        "rise": 1,
+        "peak": 2,
+        "fall": 3
+      },
+      "suggested_stats": {
+        "hp": 85,
+        "speed": 260,
+        "jump": 660,
+        "shot_damage": 8
+      },
+      "portrait": "characters/heroes/nova/portrait.png"
+    },
+    {
+      "id": "zephyr",
+      "name": "Zephyr",
+      "category": "villains",
+      "role": "villain",
+      "description": "Green hooded mage. Ranged caster, glass cannon.",
+      "placeholder": false,
+      "facing": "right",
+      "cell": {
+        "w": 66,
+        "h": 74
+      },
+      "anchor": {
+        "x": 33,
+        "y": 72
+      },
+      "hitbox": {
+        "w": 22,
+        "h": 66
+      },
+      "atlas": "characters/villains/zephyr/zephyr_atlas.png",
+      "atlas_2x": "characters/villains/zephyr/zephyr_atlas_2x.png",
+      "folder": "characters/villains/zephyr",
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 4,
+          "fps": 6,
+          "loop": true
+        },
+        "run": {
+          "row": 1,
+          "frames": 4,
+          "fps": 10,
+          "loop": true
+        },
+        "jump": {
+          "row": 2,
+          "frames": 3,
+          "fps": 8,
+          "loop": false
+        },
+        "shoot": {
+          "row": 3,
+          "frames": 2,
+          "fps": 12,
+          "loop": false
+        },
+        "hurt": {
+          "row": 4,
+          "frames": 3,
+          "fps": 10,
+          "loop": false
+        },
+        "die": {
+          "row": 5,
+          "frames": 4,
+          "fps": 7,
+          "loop": false
+        }
+      },
+      "fx": {
+        "muzzle_flash": {
+          "file": "fx/muzzle_flash.png",
+          "w": 35,
+          "h": 21
+        },
+        "magic_bolt": {
+          "file": "fx/magic_bolt.png",
+          "w": 67,
+          "h": 34
+        }
+      },
+      "jump_phases": {
+        "takeoff": 0,
+        "rise": 0,
+        "peak": 1,
+        "fall": 2
+      },
+      "suggested_stats": {
+        "hp": 60,
+        "speed": 150,
+        "jump": 500,
+        "shot_damage": 8
+      },
+      "portrait": "characters/villains/zephyr/portrait.png"
+    },
+    {
+      "id": "titan",
+      "name": "Titan",
+      "category": "bosses",
+      "role": "boss",
+      "description": "Heavy armoured mech. Slow, huge HP, fires flame bursts.",
+      "placeholder": false,
+      "facing": "right",
+      "cell": {
+        "w": 78,
+        "h": 84
+      },
+      "anchor": {
+        "x": 39,
+        "y": 82
+      },
+      "hitbox": {
+        "w": 32,
+        "h": 74
+      },
+      "atlas": "characters/bosses/titan/titan_atlas.png",
+      "atlas_2x": "characters/bosses/titan/titan_atlas_2x.png",
+      "folder": "characters/bosses/titan",
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 3,
+          "fps": 6,
+          "loop": true
+        },
+        "run": {
+          "row": 1,
+          "frames": 4,
+          "fps": 10,
+          "loop": true
+        },
+        "jump": {
+          "row": 2,
+          "frames": 3,
+          "fps": 8,
+          "loop": false
+        },
+        "shoot": {
+          "row": 3,
+          "frames": 2,
+          "fps": 12,
+          "loop": false
+        },
+        "hurt": {
+          "row": 4,
+          "frames": 3,
+          "fps": 10,
+          "loop": false
+        },
+        "die": {
+          "row": 5,
+          "frames": 3,
+          "fps": 7,
+          "loop": false
+        }
+      },
+      "fx": {
+        "flame_burst": {
+          "file": "fx/flame_burst.png",
+          "w": 104,
+          "h": 26
+        }
+      },
+      "jump_phases": {
+        "takeoff": 0,
+        "rise": 0,
+        "peak": 1,
+        "fall": 2
+      },
+      "suggested_stats": {
+        "hp": 500,
+        "speed": 90,
+        "jump": 380,
+        "shot_damage": 20
+      },
+      "portrait": "characters/bosses/titan/portrait.png"
+    },
+    {
+      "id": "rookie_placeholder",
+      "name": "Rookie (pixel placeholder)",
+      "category": "heroes",
+      "role": "hero",
+      "description": "Original red-shirt placeholder hero. Pixel-art style (does not match the painted characters).",
+      "placeholder": true,
+      "facing": "right",
+      "cell": {
+        "w": 96,
+        "h": 120
+      },
+      "anchor": {
+        "x": 48,
+        "y": 120
+      },
+      "hitbox": {
+        "w": 44,
+        "h": 100
+      },
+      "atlas": "characters/heroes/rookie_placeholder/rookie_placeholder_atlas.png",
+      "atlas_2x": null,
+      "folder": "characters/heroes/rookie_placeholder",
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 6,
+          "loop": true
+        },
+        "run": {
+          "row": 1,
+          "frames": 4,
+          "fps": 10,
+          "loop": true
+        },
+        "jump": {
+          "row": 2,
+          "frames": 5,
+          "fps": 8,
+          "loop": false
+        },
+        "attack": {
+          "row": 3,
+          "frames": 3,
+          "fps": 12,
+          "loop": false
+        },
+        "hurt": {
+          "row": 4,
+          "frames": 1,
+          "fps": 10,
+          "loop": false
+        }
+      },
+      "fx": {},
+      "jump_phases": {
+        "takeoff": 0,
+        "rise": 1,
+        "peak": 2,
+        "fall": 3,
+        "land": 4
+      },
+      "suggested_stats": {
+        "hp": 100,
+        "speed": 200,
+        "jump": 600,
+        "shot_damage": 10
+      },
+      "portrait": null
+    },
+    {
+      "id": "goblin_placeholder",
+      "name": "Goblin (pixel placeholder)",
+      "category": "villains",
+      "role": "villain",
+      "description": "Original green goblin grunt placeholder (pixel-art).",
+      "placeholder": true,
+      "facing": "right",
+      "cell": {
+        "w": 96,
+        "h": 120
+      },
+      "anchor": {
+        "x": 48,
+        "y": 120
+      },
+      "hitbox": {
+        "w": 44,
+        "h": 100
+      },
+      "atlas": "characters/villains/goblin_placeholder/goblin_placeholder_atlas.png",
+      "atlas_2x": null,
+      "folder": "characters/villains/goblin_placeholder",
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 2,
+          "fps": 6,
+          "loop": true
+        },
+        "run": {
+          "row": 1,
+          "frames": 4,
+          "fps": 10,
+          "loop": true
+        },
+        "attack": {
+          "row": 2,
+          "frames": 3,
+          "fps": 12,
+          "loop": false
+        },
+        "hurt": {
+          "row": 3,
+          "frames": 1,
+          "fps": 10,
+          "loop": false
+        }
+      },
+      "fx": {},
+      "jump_phases": null,
+      "suggested_stats": {
+        "hp": 30,
+        "speed": 100,
+        "jump": 0,
+        "shot_damage": 5
+      },
+      "portrait": null
+    }
+  ],
+  "backgrounds": [
+    {
+      "level": 1,
+      "name": "Forest",
+      "full": "backgrounds/level1_forest.png",
+      "sky": "backgrounds/level1_forest_sky.png",
+      "far": "backgrounds/level1_forest_far.png",
+      "mid": "backgrounds/level1_forest_mid.png",
+      "ground": "backgrounds/level1_forest_ground.png"
+    },
+    {
+      "level": 2,
+      "name": "Crystal Cave",
+      "full": "backgrounds/level2_cave.png",
+      "sky": "backgrounds/level2_cave_sky.png",
+      "far": "backgrounds/level2_cave_far.png",
+      "mid": "backgrounds/level2_cave_mid.png",
+      "ground": "backgrounds/level2_cave_ground.png"
+    },
+    {
+      "level": 3,
+      "name": "Castle Sunset",
+      "full": "backgrounds/level3_castle.png",
+      "sky": "backgrounds/level3_castle_sky.png",
+      "far": "backgrounds/level3_castle_far.png",
+      "mid": "backgrounds/level3_castle_mid.png",
+      "ground": "backgrounds/level3_castle_ground.png"
+    },
+    {
+      "level": 4,
+      "name": "Boss Arena (lava)",
+      "full": "backgrounds/level4_boss.png",
+      "sky": "backgrounds/level4_boss_sky.png",
+      "far": "backgrounds/level4_boss_far.png",
+      "mid": "backgrounds/level4_boss_mid.png",
+      "ground": "backgrounds/level4_boss_ground.png"
+    },
+    {
+      "level": 5,
+      "name": "Final (night/aurora)",
+      "full": "backgrounds/level5_final.png",
+      "sky": "backgrounds/level5_final_sky.png",
+      "far": "backgrounds/level5_final_far.png",
+      "mid": "backgrounds/level5_final_mid.png",
+      "ground": "backgrounds/level5_final_ground.png"
+    }
+  ],
+  "ui": {
+    "heart_full": "ui/heart_full.png",
+    "heart_empty": "ui/heart_empty.png",
+    "coin": "ui/coin.png"
+  }
+}
