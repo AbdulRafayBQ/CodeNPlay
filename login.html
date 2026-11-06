@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d1f">
+  <meta name="color-scheme" content="dark light">
+  <title>Log in or create your player - CodeNPlay</title>
+  <meta name="description" content="Create your CodeNPlay player. Your progress is saved automatically on this device.">
+  <meta property="og:title" content="CodeNPlay Academy">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/icon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/icon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/i18n.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+  var t = null; try { t = localStorage.getItem('theme'); } catch (e) {}
+  document.documentElement.dataset.theme = (t === 'cyan') ? 'cyan' : 'dark';
+  </script>
+</head>
+<body data-area="auth">
+  <header class="topbar">
+    <a class="brand" href="login.html" aria-label="CodeNPlay"><img class="brand-logo" src="assets/logo.webp" alt="CodeNPlay" width="621" height="176"></a>
+    <nav class="nav" aria-label="Theme"><button id="langToggle" type="button" class="lang-btn" aria-label="Toggle language">🌐</button><button id="themeToggle" type="button" aria-label="Toggle theme">💡</button></nav>
+  </header>
+
+  <main id="view" class="wrap auth-wrap" tabindex="-1">
+    <section class="auth-intro">
+      <p class="eyebrow" id="authEyebrow">Code. Learn. Play.</p>
+      <h1 class="h1s" id="authTitle">Create your player</h1>
+      <p class="lead sm" id="authLead">Pick a username and password. Your lessons, XP, code and battles are saved automatically, so you can close the tab or Chrome any time and continue later.</p>
+      <p class="auth-found hidden" id="legacyNote">We found progress already saved on this device. It will be added to the first account you create.</p>
+    </section>
+
+    <section class="card auth-card">
+      <div class="auth-tabs" role="tablist">
+        <button type="button" role="tab" id="tabSignup" data-tab="signup" data-t="createAccount">Create account</button>
+        <button type="button" role="tab" id="tabLogin" data-tab="login" data-t="logIn">Log in</button>
+      </div>
+
+      <form id="signupForm" class="auth-form" autocomplete="on" novalidate>
+        <label><span data-t="username">Username</span><input name="username" autocomplete="username" minlength="3" maxlength="20" required autocapitalize="off" spellcheck="false"></label>
+        <label><span data-t="password">Password</span><input name="password" type="password" autocomplete="new-password" minlength="6" required></label>
+        <label><span data-t="confirmPasswordField">Confirm password</span><input name="confirm" type="password" autocomplete="new-password" minlength="6" required></label>
+        <fieldset class="auth-hero"><legend data-t="chooseHero">Choose your hero</legend>
+          <label class="hp"><input type="radio" name="hero" value="codex" checked><img src="assets/pack/heroes/codex/portrait.webp" alt=""><b>Codex</b></label>
+          <label class="hp"><input type="radio" name="hero" value="nova"><img src="assets/pack/heroes/nova/portrait.webp" alt=""><b>Nova</b></label>
+        </fieldset>
+        <label class="auth-show"><input type="checkbox" data-show> <span data-t="showPasswords">Show passwords</span></label>
+        <button class="btn primary big" type="submit" data-t="createAndStart">Create account &amp; start</button>
+        <p class="auth-msg" id="signupMsg" role="status" aria-live="polite"></p>
+      </form>
+
+      <form id="loginForm" class="auth-form hidden" autocomplete="on" novalidate>
+        <div class="auth-known hidden" id="known"><small data-t="playersOnDevice">Players on this device</small><div id="knownList"></div></div>
+        <label><span data-t="username">Username</span><input name="username" autocomplete="username" required autocapitalize="off" spellcheck="false"></label>
+        <label><span data-t="password">Password</span><input name="password" type="password" autocomplete="current-password" required></label>
+        <label class="auth-show"><input type="checkbox" data-show> <span data-t="showPassword">Show password</span></label>
+        <button class="btn primary big" type="submit" data-t="logInBtn">Log in</button>
+        <p class="auth-msg" id="loginMsg" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="auth-note" data-t="accountWarning">Your account and progress live only in this browser on this device (no server). Do not clear site data for this page, or they will be erased.</p>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+  <noscript><p style="padding:24px;color:#fff">Please turn on JavaScript to use CodeNPlay.</p></noscript>
+  <script defer src="js/login.js"></script>
+  <script defer src="js/theme.js"></script>
+</body>
+</html>
