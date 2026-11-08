@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d1f">
+  <meta name="color-scheme" content="dark light">
+  <title>Courses - CodeNPlay</title>
+  <meta name="description" content="Choose your course: Web Development is open now. Short lessons, a live code editor and game battles.">
+  <meta property="og:title" content="Courses - CodeNPlay">
+  <meta property="og:description" content="Choose your course: Web Development is open now. Short lessons, a live code editor and game battles.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/icon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23ffcf4a%27/%3E%3Ctext x=%2716%27 y=%2721%27 font-size=%2713%27 font-family=%27monospace%27 text-anchor=%27middle%27 fill=%27%231b1500%27%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/i18n.js"></script>
+  <script src="js/i18n-questions.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+  var t = null; try { t = localStorage.getItem('theme'); } catch (e) {}
+  document.documentElement.dataset.theme = (t === 'cyan') ? 'cyan' : 'dark';
+  </script>
+</head>
+<body data-area="learn">
+  <a class="skip-link" href="#view">Skip to content</a>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="CodeNPlay home"><img class="brand-logo" src="assets/logo.webp" alt="CodeNPlay" width="621" height="176"></a>
+    <nav class="nav" aria-label="Main">
+      <button id="langToggle" type="button" class="lang-btn" aria-label="Toggle language"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></svg></button>
+      <button id="themeToggle" type="button" aria-label="Toggle theme"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+      <a href="index.html" data-nav="home" data-t="home">Home</a>
+      <a href="courses.html" data-nav="learn" aria-current="page" data-t="courses">Courses</a>
+      <a href="profile.html" data-nav="profile" data-t="profile">Profile</a>
+    </nav>
+    <a class="xp" id="xpChip" href="profile.html" title="Open your profile" aria-label="Your XP and profile"></a>
+  </header>
+
+  <main id="view" class="wrap" tabindex="-1"></main>
+
+  <nav class="tabbar" aria-label="Main mobile">
+    <a href="index.html" data-nav="home"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span data-t="home">Home</span></a>
+    <a href="courses.html" data-nav="learn" aria-current="page"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/><path d="M9 7h6"/></svg><span data-t="courses">Courses</span></a>
+    <a href="profile.html" data-nav="profile"><span class="emo"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><span data-t="profile">Profile</span></a>
+    <button type="button" id="tabLang" class="lang-btn-mobile" aria-label="Toggle language"><span class="emo"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></svg></span><span>Lang</span></button>
+    <button type="button" id="tabTheme" aria-label="Toggle theme"><span class="emo"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span><span data-t="dark">Dark</span></button>
+  </nav>
+
+  <div id="modal" class="modal" aria-live="polite"></div>
+  <div id="toast" class="toast" role="status"></div>
+  <noscript><p style="padding:24px;color:#fff">Please turn on JavaScript to use CodeNPlay.</p></noscript>
+
+  
+  <script defer src="js/lessons.js"></script>
+  <script defer src="js/lessons-more.js"></script>
+  <script defer src="js/tests-extra.js"></script>
+  <script defer src="js/hints.js"></script>
+  <script defer src="js/quest.js"></script>
+  <script defer src="js/curriculum.js"></script>
+  <script defer src="js/runner.js"></script>
+  <script defer src="js/core.js"></script>
+  <script defer src="js/academy.js"></script>
+  <script defer src="js/editor.js"></script>
+  <script defer src="js/courses.js"></script>
+  <script defer src="js/theme.js"></script>
+</body>
+</html>
